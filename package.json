@@ -5,6 +5,7 @@
   "author": "gethugothemes",
   "scripts": {
     "dev": "tinacms dev -c \"hugo server -D\"",
+    "prebuild": "yarn install",
     "build": "tinacms build && hugo",
     "postinstall": "yarn global add @tinacms/cli",
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
