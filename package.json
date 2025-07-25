@@ -5,6 +5,7 @@
   "author": "gethugothemes",
   "scripts": {
     "build": "npx tinacms build && hugo",
+    "prebuild": "npm install @tinacms/cli"
     "dev": "npx tinacms dev -c \"hugo server -D\"",
     "postinstall": "npm run build",
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
