@@ -4,10 +4,9 @@
   "license": "MIT",
   "author": "gethugothemes",
   "scripts": {
-    "dev": "tinacms dev -c \"hugo server -D\"",
-    "prebuild": "yarn install",
-    "build": "tinacms build && hugo",
-    "postinstall": "yarn global add @tinacms/cli",
+    "build": "npx tinacms build && hugo",
+    "dev": "npx tinacms dev -c \"hugo server -D\"",
+    "postinstall": "npm run build",
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
     "dev:example": "cd exampleSite; hugo server --themesDir ../..",
     "build:example": "cd exampleSite; hugo --themesDir ../.. --gc --minify --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --forceSyncStatic",
