@@ -1,6 +1,6 @@
 [build]
-publish = "exampleSite/public"
-command = "npm install tinacms build && hugo"
+publish = "public"
+command = "yarn project-setup && yarn build"
 
 [build.environment]
 HUGO_VERSION = "0.147.2"
